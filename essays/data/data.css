@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+  }
+
+@font-face{
+    font-family: Titania;
+    src: url(../../font/Titania-Regular.ttf);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    color: rgb(59, 59, 59);
+    font-family: Titania;
+    line-height: 1.2;
+    background-color: rgb(255, 230, 193);
+    min-height: 100vh;
+}
+
+body img{
+    z-index: -1;
+}
+
+.container {
+    width: 1000px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template:
+      "header header"
+      "sidebar main"
+      "footer footer"
+      / 1fr 4fr;
+  }
+  
+
+header { 
+    grid-area: header; 
+    text-align: left;
+    font-weight: 500;
+    z-index: 1;
+}
+
+header p {
+    font-size: 100px;
+    line-height: 0%;
+}
+
+aside { 
+    grid-area: sidebar; 
+    z-index: 1;
+}
+
+aside li {
+    list-style-type: none;
+}
+
+aside a{
+    text-decoration: none;
+    line-height: 3;
+    color: rgb(59, 59, 59);
+    font-size: large;
+    padding: 5px;
+}
+
+aside a:hover{
+    color: rgb(59, 59, 59);
+    font-size: 22px;
+    transition: 0.1s;
+}
+
+aside hr{
+    border: 2px dashed rgb(94, 94, 94);
+}
+
+main { 
+    grid-area: main; 
+    border: 2px dashed black;
+    background-color: rgb(255, 245, 225);
+    padding: 10px;
+	font-family: Times New Roman;
+}
+
+footer { 
+    grid-area: footer; 
+    text-align: right;
+    font-weight: 50;
+    font-size: small;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.previewbox {
+    display: block;
+    background-color:floralwhite;
+    border: 2px dotted black;
+    padding: 10px;
+    margin: 10px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.previewbox img {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.previewbox h5{
+    float: right
+    
+}
+
+main table th{
+    background-color: grey;
+    color: white;
+}
+
+main table td{
+    background-color: whitesmoke;
+}
